@@ -5,10 +5,10 @@
   --color-chad-surface: #0D0E1A;
   --color-chad-card: #12131F;
   --color-chad-border: #1E2035;
-  --color-chad-blue: #00D4FF;
-  --color-chad-blue-dim: #0099CC;
-  --color-chad-gold: #FFB700;
-  --color-chad-green: #00FF88;
+  --color-chad-blue: #4AFF91;
+  --color-chad-blue-dim: #22CC66;
+  --color-chad-gold: #4AFF91;
+  --color-chad-green: #4AFF91;
   --color-chad-red: #FF3B5C;
   --color-chad-muted: #6B7280;
   --font-sans: var(--font-geist-sans);
@@ -39,7 +39,7 @@ body {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #00D4FF44;
+  background: #4AFF9144;
 }
 
 @keyframes marquee {
@@ -71,11 +71,11 @@ body {
 }
 
 .glow-blue {
-  box-shadow: 0 0 20px #00D4FF33, 0 0 60px #00D4FF11;
+  box-shadow: 0 0 20px #4AFF9133, 0 0 60px #4AFF9111;
 }
 
 .glow-gold {
-  box-shadow: 0 0 20px #FFB70033, 0 0 60px #FFB70011;
+  box-shadow: 0 0 20px #4AFF9133, 0 0 60px #4AFF9111;
 }
 
 .glass {
@@ -86,7 +86,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #00D4FF, #FFB700);
+  background: linear-gradient(135deg, #4AFF91, #4AFF91);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -111,6 +111,6 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #00D4FF66, transparent);
+  background: linear-gradient(90deg, transparent, #4AFF9166, transparent);
   animation: scan-line 3s linear infinite;
 }

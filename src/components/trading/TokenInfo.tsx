@@ -36,7 +36,7 @@ export default function TokenInfo({ token }: Props) {
         {token.imageUrl ? (
           <img src={token.imageUrl} alt={token.symbol} className="w-12 h-12 rounded-full" />
         ) : (
-          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#00D4FF] to-[#FFB700] flex items-center justify-center text-black font-black text-lg">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#4AFF91] to-[#4AFF91] flex items-center justify-center text-black font-black text-lg">
             {token.symbol.slice(0, 2)}
           </div>
         )}
@@ -69,7 +69,7 @@ export default function TokenInfo({ token }: Props) {
         <span className="font-mono text-gray-400 truncate max-w-xs">{token.address}</span>
         <button
           onClick={() => navigator.clipboard.writeText(token.address)}
-          className="text-[#00D4FF] hover:text-white transition-colors flex-shrink-0"
+          className="text-[#4AFF91] hover:text-white transition-colors flex-shrink-0"
           title="Copy address"
         >
           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">

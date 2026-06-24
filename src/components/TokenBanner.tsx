@@ -15,16 +15,16 @@ function TokenChip({ token, onClick }: { token: TrendingToken; onClick: () => vo
   return (
     <button
       onClick={onClick}
-      className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#1E2035] bg-[#0D0E1A] hover:border-[#00D4FF44] hover:bg-[#00D4FF08] transition-all duration-200 cursor-pointer whitespace-nowrap group"
+      className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#1E2035] bg-[#0D0E1A] hover:border-[#4AFF9144] hover:bg-[#4AFF9108] transition-all duration-200 cursor-pointer whitespace-nowrap group"
     >
       {token.imageUrl ? (
         <img src={token.imageUrl} alt={token.symbol} className="w-5 h-5 rounded-full" />
       ) : (
-        <span className="w-5 h-5 rounded-full bg-gradient-to-br from-[#00D4FF] to-[#FFB700] flex items-center justify-center text-[8px] font-bold text-black">
+        <span className="w-5 h-5 rounded-full bg-gradient-to-br from-[#4AFF91] to-[#4AFF91] flex items-center justify-center text-[8px] font-bold text-black">
           {token.symbol.slice(0, 2)}
         </span>
       )}
-      <span className="font-semibold text-sm text-white group-hover:text-[#00D4FF] transition-colors">
+      <span className="font-semibold text-sm text-white group-hover:text-[#4AFF91] transition-colors">
         {token.symbol}
       </span>
       <span className="text-sm text-gray-400">${formatPrice(token.price)}</span>

@@ -3,6 +3,8 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import TokenBanner from '@/components/TokenBanner';
 import FeatureSection from '@/components/FeatureSection';
+import AppShowcase from '@/components/AppShowcase';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const revalidate = 30;
@@ -23,6 +25,9 @@ export default async function HomePage() {
       <div className="pt-28">
         <HeroSection />
       </div>
+
+      {/* App Screenshots Showcase */}
+      <AppShowcase />
 
       {/* Features */}
       <FeatureSection />
@@ -56,7 +61,7 @@ export default async function HomePage() {
           <h2 className="text-3xl font-black text-white">
             Trending on <span className="gradient-text">Solana</span>
           </h2>
-          <Link href="/trade" className="text-sm text-[#00D4FF] hover:text-white transition-colors font-semibold">
+          <Link href="/trade" className="text-sm text-[#4AFF91] hover:text-white transition-colors font-semibold">
             View all →
           </Link>
         </div>
@@ -65,18 +70,18 @@ export default async function HomePage() {
             <Link
               key={token.address}
               href={`/trade/${token.address}`}
-              className="flex items-center gap-3 p-4 rounded-xl border border-[#1E2035] bg-[#0D0E1A] hover:border-[#00D4FF44] hover:bg-[#00D4FF05] transition-all group"
+              className="flex items-center gap-3 p-4 rounded-xl border border-[#1E2035] bg-[#0D0E1A] hover:border-[#4AFF9144] hover:bg-[#4AFF9105] transition-all group"
             >
               {token.imageUrl ? (
                 <img src={token.imageUrl} alt={token.symbol} className="w-10 h-10 rounded-full flex-shrink-0" />
               ) : (
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#00D4FF] to-[#FFB700] flex items-center justify-center text-black font-bold text-sm flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#4AFF91] to-[#4AFF91] flex items-center justify-center text-black font-bold text-sm flex-shrink-0">
                   {token.symbol.slice(0, 2)}
                 </div>
               )}
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between">
-                  <span className="font-bold text-white text-sm group-hover:text-[#00D4FF] transition-colors">{token.symbol}</span>
+                  <span className="font-bold text-white text-sm group-hover:text-[#4AFF91] transition-colors">{token.symbol}</span>
                   <span className={`text-xs font-semibold ${token.priceChange24h >= 0 ? 'text-[#00FF88]' : 'text-[#FF3B5C]'}`}>
                     {token.priceChange24h >= 0 ? '+' : ''}{token.priceChange24h.toFixed(2)}%
                   </span>
@@ -118,7 +123,7 @@ export default async function HomePage() {
               href="https://play.google.com/store/apps/details?id=xyz.chadwallet.www"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 px-8 py-4 rounded-xl border border-[#1E2035] bg-[#0D0E1A] text-white font-bold hover:border-[#00D4FF44] hover:bg-[#00D4FF08] transition-all"
+              className="flex items-center gap-3 px-8 py-4 rounded-xl border border-[#1E2035] bg-[#0D0E1A] text-white font-bold hover:border-[#4AFF9144] hover:bg-[#4AFF9108] transition-all"
             >
               <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M3.18 23.76c.3.17.65.19.96.08l12.45-7.19-2.78-2.78-10.63 9.89zM20.65 9.19L17.5 7.34l-3.12 3.12 3.12 3.12 3.18-1.85c.91-.52.91-1.82-.03-2.54zM1.08.29C.79.52.62.89.62 1.33v21.38c0 .44.17.81.46 1.04l.09.06 11.98-11.98v-.28L1.17.23l-.09.06zM12.9 7.94L1.08.29l10.63 9.88 2.82-2.82-.99-.99-.64.58z" />
@@ -138,7 +143,7 @@ export default async function HomePage() {
       <footer className="border-t border-[#1E2035] py-8 px-4">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-gradient-to-br from-[#00D4FF] to-[#FFB700] flex items-center justify-center font-black text-black text-xs">C</div>
+            <Image src="/logo.png" alt="ChadWallet" width={24} height={24} className="rounded-md" />
             <span>© 2025 ChadWallet</span>
           </div>
           <div className="flex items-center gap-6">

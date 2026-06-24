@@ -68,7 +68,7 @@ export default function PriceChart({ tokenAddress, symbol }: Props) {
             onClick={() => setInterval(iv)}
             className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
               interval.label === iv.label
-                ? 'bg-[#00D4FF] text-black'
+                ? 'bg-[#4AFF91] text-black'
                 : 'text-gray-500 hover:text-white hover:bg-[#1E2035]'
             }`}
           >

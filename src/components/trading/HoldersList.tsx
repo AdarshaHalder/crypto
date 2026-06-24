@@ -41,7 +41,7 @@ export default function HoldersList({ tokenAddress }: Props) {
                 </div>
                 <div className="h-1 rounded-full bg-[#1E2035] overflow-hidden">
                   <div
-                    className="h-full rounded-full bg-gradient-to-r from-[#00D4FF] to-[#FFB700]"
+                    className="h-full rounded-full bg-gradient-to-r from-[#4AFF91] to-[#4AFF91]"
                     style={{ width: `${Math.min(h.percentOwned * 4, 100)}%` }}
                   />
                 </div>

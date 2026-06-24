@@ -42,7 +42,7 @@ export default function TrendingList() {
             placeholder="Search…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full bg-[#08090E] border border-[#1E2035] rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#00D4FF44] transition-colors"
+            className="w-full bg-[#08090E] border border-[#1E2035] rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#4AFF9144] transition-colors"
           />
         </div>
       </div>
@@ -59,12 +59,12 @@ export default function TrendingList() {
                 <button
                   key={token.address}
                   onClick={() => router.push(`/trade/${token.address}`)}
-                  className={`w-full flex items-center gap-2 px-3 py-3 hover:bg-[#00D4FF08] transition-all text-left ${isActive ? 'bg-[#00D4FF08] border-l-2 border-[#00D4FF]' : ''}`}
+                  className={`w-full flex items-center gap-2 px-3 py-3 hover:bg-[#4AFF9108] transition-all text-left ${isActive ? 'bg-[#4AFF9108] border-l-2 border-[#4AFF91]' : ''}`}
                 >
                   {token.imageUrl ? (
                     <img src={token.imageUrl} alt={token.symbol} className="w-8 h-8 rounded-full flex-shrink-0" />
                   ) : (
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#00D4FF] to-[#FFB700] flex items-center justify-center text-black font-bold text-xs flex-shrink-0">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#4AFF91] to-[#4AFF91] flex items-center justify-center text-black font-bold text-xs flex-shrink-0">
                       {token.symbol.slice(0, 2)}
                     </div>
                   )}

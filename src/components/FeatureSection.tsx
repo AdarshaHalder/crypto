@@ -9,7 +9,7 @@ const features = [
     ),
     title: 'Instant Swaps',
     desc: 'Jupiter-powered routing finds the best price across all Solana DEXs in milliseconds.',
-    accent: '#00D4FF',
+    accent: '#4AFF91',
   },
   {
     icon: (
@@ -29,7 +29,7 @@ const features = [
     ),
     title: 'Live Token Feed',
     desc: 'Trending tokens updated in real-time with volume, holders, and on-chain activity.',
-    accent: '#FFB700',
+    accent: '#4AFF91',
   },
   {
     icon: (
@@ -59,7 +59,7 @@ export default function FeatureSection() {
         {features.map(({ icon, title, desc, accent }) => (
           <div
             key={title}
-            className="relative p-6 rounded-2xl border border-[#1E2035] bg-[#0D0E1A] hover:border-[#00D4FF33] transition-all duration-300 group overflow-hidden"
+            className="relative p-6 rounded-2xl border border-[#1E2035] bg-[#0D0E1A] hover:border-[#4AFF9133] transition-all duration-300 group overflow-hidden"
           >
             <div
               className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"

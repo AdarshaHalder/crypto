@@ -43,19 +43,19 @@ export default async function TradePage() {
               <Link
                 key={token.address}
                 href={`/trade/${token.address}`}
-                className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_auto] gap-4 px-5 py-3.5 border-b border-[#1E2035] last:border-0 hover:bg-[#00D4FF05] transition-all group items-center"
+                className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_auto] gap-4 px-5 py-3.5 border-b border-[#1E2035] last:border-0 hover:bg-[#4AFF9105] transition-all group items-center"
               >
                 <div className="flex items-center gap-3">
                   <span className="text-xs text-gray-700 w-5">{i + 1}</span>
                   {token.imageUrl ? (
                     <img src={token.imageUrl} alt={token.symbol} className="w-8 h-8 rounded-full" />
                   ) : (
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#00D4FF] to-[#FFB700] flex items-center justify-center text-black font-bold text-xs">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#4AFF91] to-[#4AFF91] flex items-center justify-center text-black font-bold text-xs">
                       {token.symbol.slice(0, 2)}
                     </div>
                   )}
                   <div>
-                    <div className="font-bold text-sm text-white group-hover:text-[#00D4FF] transition-colors">{token.symbol}</div>
+                    <div className="font-bold text-sm text-white group-hover:text-[#4AFF91] transition-colors">{token.symbol}</div>
                     <div className="text-xs text-gray-600 truncate max-w-[120px]">{token.name}</div>
                   </div>
                 </div>
@@ -68,7 +68,7 @@ export default async function TradePage() {
                 <div className="text-right text-sm text-gray-400">{formatNum(token.volume24h)}</div>
                 <div className="text-right text-sm text-gray-400">{formatNum(token.marketCap)}</div>
                 <div>
-                  <span className="px-3 py-1 rounded-lg bg-[#00D4FF15] text-[#00D4FF] text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="px-3 py-1 rounded-lg bg-[#4AFF9115] text-[#4AFF91] text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
                     Trade →
                   </span>
                 </div>
