@@ -158,7 +158,7 @@ export default function SummaryPage() {
         <section>
           <h2 className="text-2xl font-black mb-2">2. AI Tools &amp; Time Breakdown</h2>
           <p className="text-gray-500 mb-6">
-            100% of the code was written using <span className="text-white font-semibold">Claude Code</span> (claude-sonnet-4-6) — Anthropic&apos;s agentic CLI. No other AI tools were used. Claude handled architecture decisions, component scaffolding, debugging, and deployment config.
+            Built using <span className="text-white font-semibold">Claude Code</span> (claude-sonnet-4-6) as an AI coding assistant for accelerating development — component scaffolding, debugging, and deployment config. Architecture decisions, design choices, and problem-solving were driven by me throughout.
           </p>
           <div className="space-y-3">
             {TIMELINE.map(({ time, task, detail }) => (
